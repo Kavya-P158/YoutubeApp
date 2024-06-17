@@ -1,0 +1,61 @@
+// Array of sample comments
+const comments = [
+    "Wow, this is fascinating!",
+    "Can you explain that again?",
+    "I didn't know that!",
+    "Awesome explanation!",
+    "This live is so informative!",
+    "Keep up the good work!",
+    "Mind blown!",
+    "I'm learning a lot from this live!",
+    "Great session, thank you!",
+    "I'm taking notes right now!",
+    "This is exactly what I needed!",
+    "This live is lit!",
+    "I've never seen this before!",
+    "Thanks for sharing this with us!",
+    "This is gold!",
+    "This live chat is fire!",
+    "Can't wait for the next live!",
+    "You're an amazing teacher!",
+    "Subscribed just now!",
+    "I'm sharing this with my friends!",
+    "This is so interesting!",
+    "More lives like this please!",
+    "I'm hooked on this live!",
+    "Mind = Blown!",
+    "I'm so glad I joined this live!",
+    "You're doing a fantastic job!",
+    "This is the best live ever!",
+    "I'm learning more here than anywhere else!",
+    "This live deserves more views!",
+    "Can we have a Q&A session?",
+    "This is so insightful!",
+    "I'm becoming a fan right now!",
+    "You're making it easy to understand!",
+    "This live is going viral!",
+    "This is exactly what I was looking for!",
+    "Can I get a shoutout?",
+    "I'm bookmarking this live!",
+    "Can you explain the next step?",
+    "This is the highlight of my day!",
+    "I feel smarter already!",
+    "You should do more lives like this!",
+    "Can't believe this is free!",
+    "I'm becoming a pro thanks to this live!",
+    "This is awesome!",
+    "You're rocking this live!",
+    "I'm joining your community!",
+    "You're a great presenter!",
+    "This is top-notch content!",
+    "I'm captivated by this live!",
+    "This live chat is addictive!",
+];
+
+// Function to generate a random comment
+export default function generateRandomComment() {
+    const randomIndex = Math.floor(Math.random() * comments.length);
+    return comments[randomIndex];
+}
+
+
