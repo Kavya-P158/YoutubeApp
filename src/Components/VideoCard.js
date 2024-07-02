@@ -14,7 +14,7 @@ const VideoCard = (props) => {
                 <img className='rounded-lg hover:rounded-none' src={channelImage} ></img>
                 <h1 className='font-bold py-2'>{snippet.title}</h1>
                 <h2 className='text-gray-600'>{snippet.channelTitle}</h2>
-                <h3>{statistics.viewCount}</h3>
+
 
             </div>
         </div>

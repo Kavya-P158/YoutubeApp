@@ -15,7 +15,7 @@ const Head = () => {
     const [searchSuggestion, setSuggestion] = useState([])
     const [showSuggestion, setShowSuggestion] = useState(false)
     const searchSlicedata = useSelector((store) => store.search)
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     useEffect(() => {
 
@@ -52,15 +52,16 @@ const Head = () => {
         const data = await fetch('https://www.googleapis.com/youtube/v3/search?part=snippet,id&maxResults=15&q=' + item + '&key=' + GOOGLE_APIKEY);
         const json = await data.json();
         console.log(json);
-        <SearchVideo video={json.items} />
+        //     <SearchVideo video={json.items} />
     }
     const handleSearchClick = (item) => {
-        console.log(item); setShowSuggestion(false);
+        console.log(item);
         setSearchQuery(item);
 
-        // fetchSearchVideos(item);
-        // // navigate("results?search_query=" + item)
-        // navigate("results")
+        fetchSearchVideos(item);
+        navigate("/results?search_query=" + item, { state: item })
+        setShowSuggestion(false);
+
 
     }
     return (
@@ -93,7 +94,7 @@ const Head = () => {
 
                             {
                                 searchSuggestion.map((item) =>
-                                    <li className=' border-gray-100 hover:bg-gray-100 cursor-pointer'> <button onClick={() => handleSearchClick(item)}>{item}</button></li>
+                                    <li onClick={() => handleSearchClick(item)} className=' border-gray-100 hover:bg-gray-100 cursor-pointer'>{item} </li>
                                 )
                             }
 
